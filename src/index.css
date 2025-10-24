@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 97%;
+    --background: 0 0% 98%;
     --foreground: 0 0% 13%;
 
     --card: 0 0% 100%;
@@ -19,13 +19,14 @@ All colors MUST be HSL.
 
     --primary: 346 71% 29%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 346 71% 40%;
+    --primary-glow: 346 71% 45%;
+    --primary-light: 346 71% 85%;
 
     --secondary: 335 53% 65%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 40%;
+    --muted-foreground: 0 0% 45%;
 
     --accent: 27 85% 88%;
     --accent-foreground: 346 71% 29%;
@@ -33,24 +34,29 @@ All colors MUST be HSL.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 89%;
-    --input: 0 0% 89%;
+    --border: 0 0% 92%;
+    --input: 0 0% 92%;
     --ring: 346 71% 29%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Gradients */
-    --gradient-romantic: linear-gradient(135deg, hsl(346 71% 29%) 0%, hsl(335 53% 65%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(27 85% 95%) 0%, hsl(0 0% 97%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(27 85% 98%) 100%);
+    /* Rich Gradients */
+    --gradient-romantic: linear-gradient(135deg, hsl(346 71% 29%) 0%, hsl(346 71% 40%) 50%, hsl(335 53% 65%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(27 85% 96%) 0%, hsl(346 71% 98%) 40%, hsl(0 0% 98%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(27 85% 98%) 50%, hsl(346 71% 99%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(27 85% 88%) 0%, hsl(27 85% 92%) 100%);
+    --gradient-overlay: linear-gradient(180deg, transparent 0%, hsl(346 71% 29% / 0.7) 100%);
 
-    /* Shadows */
-    --shadow-romantic: 0 10px 40px -10px hsl(346 71% 29% / 0.3);
-    --shadow-card: 0 4px 20px -4px hsl(0 0% 50% / 0.1);
-    --shadow-glow: 0 0 40px hsl(346 71% 40% / 0.4);
+    /* Enhanced Shadows */
+    --shadow-romantic: 0 20px 60px -15px hsl(346 71% 29% / 0.35);
+    --shadow-card: 0 8px 30px -8px hsl(346 71% 29% / 0.12);
+    --shadow-glow: 0 0 60px hsl(346 71% 45% / 0.5);
+    --shadow-hover: 0 15px 50px -10px hsl(346 71% 29% / 0.25);
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 50% / 0.08);
 
     /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   .dark {
@@ -129,15 +135,39 @@ All colors MUST be HSL.
     background: var(--gradient-card);
   }
 
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
   .shadow-romantic {
     box-shadow: var(--shadow-romantic);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
   }
 
   .shadow-glow {
     box-shadow: var(--shadow-glow);
   }
 
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
+
   .transition-smooth {
     transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-hover;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-glow;
   }
 }
