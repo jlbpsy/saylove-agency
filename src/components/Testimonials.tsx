@@ -3,38 +3,27 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sophie & Marc",
-    location: "Paris",
-    text: "Après des années d'essais infructueux sur d'autres sites, Saylove Agency a tout changé. L'approche scientifique est incroyable, nous sommes vraiment compatibles sur tous les plans !",
-    rating: 5,
-    couple: true
+    name: "Hélène, 45 ans",
+    text: "« J'ai enfin trouvé un amour équilibré grâce à SayLove. Je ne remercierai jamais assez le Dr. Jean-Luc Beaumont de m'avoir trouvé l'amour qui répond au doux prénom de Maxime. À L'époque j'étais sur les applis et je n'étais pas en phase avec moi-même. Avec les personnes que je rencontrais, ça clachait inévitablement à cause de mes vulnérabilités et de mon partenaire. Aujourd'hui je me sens plus équilibrée personnellement et dans notre couple avec Maxime depuis 2 ans.»",
+    rating: 5
   },
   {
-    name: "Émilie D.",
-    location: "Lyon",
-    text: "Je ne croyais pas à la compatibilité scientifique au début, mais les résultats parlent d'eux-mêmes. J'ai trouvé quelqu'un qui me comprend vraiment. Merci Saylove !",
-    rating: 5,
-    couple: false
+    name: "François, 36 ans",
+    text: "« Un accompagnement sérieux et humain qui a changé ma vie. Je n'avais plus envie de prendre mon temps sur les appli . Les agences matrimoniales que j'avais essayées n'avaient que peu de personnes à me présenter. Je suis fier d'être le premier à avoir proposé à Jean-Luc Beaumont de me coacher personnellement et de me trouver l'amour. Je n'étais pas un cadeau, je le sais mais depuis 2 ans et 5 mois je me suis stabilisé avec Perrine, 34 ans. On s'aime énormément, on fait un tas d'activités à deux et on gère bien nos émotions…»",
+    rating: 5
   },
   {
-    name: "Thomas & Julie",
-    location: "Bordeaux",
-    text: "L'accompagnement personnalisé fait toute la différence. L'équipe nous a aidés à construire une vraie connexion avant même notre première rencontre. Nous sommes ensemble depuis 2 ans maintenant.",
-    rating: 5,
-    couple: true
+    name: "Karine, 54 ans",
+    text: "« La deuxième rencontre a été la bonne. Je voulais une personne bien à tous égards et je n'ai jamais trouvé dans la vie réelle, ni sur les quelques applis soi-disant haut de gamme que j'ai fréquentées. J'ai même adhéré à une agence de rencontre et ils ne m'ont trouvé que trois personnes incompatibles en 6 mois ! Je sais que je suis très exigeante, mais ça me semble normal sur le plan amoureux. Quand j'ai fait appel à JL Beaumont, la deuxième rencontre a été la bonne. Nous sommes encore ensemble aujourd'hui (1an1/2).»",
+    rating: 5
   }
 ];
 
 const Testimonials = () => {
   return (
-    <section className="py-24 bg-background">
+    <section id="temoignages" className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-foreground">Ils Ont Trouvé l'Amour</h2>
-          <p className="text-lg text-muted-foreground">
-            Des milliers de couples heureux grâce à notre approche scientifique
-          </p>
-        </div>
+        <h2 className="text-foreground mb-16">Témoignages</h2>
         
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
@@ -44,17 +33,16 @@ const Testimonials = () => {
                 
                 <div className="flex gap-1">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                    <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
                   ))}
                 </div>
                 
-                <p className="text-muted-foreground leading-relaxed italic">
-                  "{testimonial.text}"
+                <p className="text-muted-foreground leading-relaxed text-sm italic">
+                  {testimonial.text}
                 </p>
                 
                 <div className="pt-4 border-t border-border">
                   <div className="font-semibold text-foreground">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.location}</div>
                 </div>
               </CardContent>
             </Card>

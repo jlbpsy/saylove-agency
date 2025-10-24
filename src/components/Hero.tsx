@@ -4,58 +4,30 @@ import heroImage from "@/assets/hero-couple.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center gradient-hero">
-      <div className="container mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
-              <Heart className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Compatibilité Scientifique</span>
-            </div>
-            
-            <h1 className="text-foreground">
-              Trouvez l'Amour avec la Science
-            </h1>
-            
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Saylove Agency utilise des algorithmes scientifiques avancés pour vous connecter avec des partenaires vraiment compatibles. Notre approche basée sur la recherche garantit des relations durables et épanouissantes.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="xl">
-                Commencer Maintenant
-              </Button>
-              <Button variant="outline" size="xl">
-                En Savoir Plus
-              </Button>
-            </div>
-            
-            <div className="flex items-center gap-8 pt-4">
-              <div>
-                <div className="text-3xl font-bold text-primary">94%</div>
-                <div className="text-sm text-muted-foreground">Taux de compatibilité</div>
-              </div>
-              <div className="w-px h-12 bg-border"></div>
-              <div>
-                <div className="text-3xl font-bold text-primary">2500+</div>
-                <div className="text-sm text-muted-foreground">Couples formés</div>
-              </div>
-              <div className="w-px h-12 bg-border"></div>
-              <div>
-                <div className="text-3xl font-bold text-primary">15 ans</div>
-                <div className="text-sm text-muted-foreground">D'expérience</div>
-              </div>
-            </div>
-          </div>
+    <section className="relative py-20 gradient-hero">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl space-y-6">
+          <h1 className="text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
+            SayLove Agency — rencontres authentiques & durables
+          </h1>
           
-          <div className="relative">
-            <div className="absolute inset-0 gradient-romantic rounded-3xl blur-3xl opacity-20"></div>
-            <img
-              src={heroImage}
-              alt="Couple heureux trouvé grâce à Saylove Agency"
-              className="relative rounded-3xl shadow-romantic w-full h-auto object-cover"
-            />
-          </div>
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            Une approche scientifique et bienveillante portée par Jean-Luc Beaumont, docteur en psychologie et spécialiste du couple pour <strong>les 25-75 ans.</strong>
+          </p>
+          
+          <Button variant="default" size="xl" asChild>
+            <a href="https://calendly.com/jlbpsy/rdv" target="_blank" rel="noopener noreferrer">
+              Prendre un rendez-vous offert de 30 min.
+            </a>
+          </Button>
+        </div>
+        
+        <div className="relative mt-8 rounded-3xl overflow-hidden shadow-romantic h-[400px]">
+          <img
+            src={heroImage}
+            alt="Couple amoureux dans un champ de fleurs au coucher du soleil"
+            className="w-full h-full object-cover opacity-85"
+          />
         </div>
       </div>
     </section>
