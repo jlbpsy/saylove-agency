@@ -22,7 +22,7 @@ const formules = [
 
 const Formules = () => {
   return (
-    <section id="formules" className="py-24 bg-muted">
+    <section id="formules" className="py-24 gradient-hero">
       <div className="container mx-auto px-4">
         <h2 className="text-foreground mb-16 text-center">Nos formules</h2>
         

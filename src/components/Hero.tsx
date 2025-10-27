@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-couple.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative py-20 bg-background overflow-hidden">
+    <section className="relative py-20 gradient-hero overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl space-y-8">
           <h1 className="text-foreground leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
