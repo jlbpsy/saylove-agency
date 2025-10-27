@@ -38,11 +38,18 @@ const Header = () => {
             </button>
           </div>
           
-          <Button variant="default" asChild>
-            <a href="https://calendly.com/jlbpsy/rdv" target="_blank" rel="noopener noreferrer">
-              Prendre RDV
-            </a>
-          </Button>
+          <div className="flex items-center gap-3">
+            <Button variant="outline" asChild>
+              <a href="/gg">
+                Se connecter / S'inscrire
+              </a>
+            </Button>
+            <Button variant="default" asChild>
+              <a href="https://calendly.com/jlbpsy/rdv" target="_blank" rel="noopener noreferrer">
+                Prendre RDV
+              </a>
+            </Button>
+          </div>
         </nav>
       </div>
     </header>
